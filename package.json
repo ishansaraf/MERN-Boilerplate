@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Boilerplate MERN application for user authentication",
   "main": "./backend/server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ishansaraf/MERN-Boilerplate.git"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "concurrently": "^4.0.1",
@@ -23,7 +27,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && npm start",
-    "server": "cd backend && nodemon server.js",
+    "server": "cd backend && nodemon server.js --exec babel-node --presets es2015,stage-0",
     "dev": "concurrently 'npm run server' 'npm run client'"
   },
   "author": "Ishan Saraf",
